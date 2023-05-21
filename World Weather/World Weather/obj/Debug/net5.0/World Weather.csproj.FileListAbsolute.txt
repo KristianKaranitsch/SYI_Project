@@ -1,0 +1,40 @@
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\appsettings.json
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.exe
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.deps.json
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.runtimeconfig.json
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.runtimeconfig.dev.json
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.dll
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\ref\World Weather.dll
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.pdb
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.Views.dll
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\bin\Debug\net5.0\World Weather.Views.pdb
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.csproj.AssemblyReference.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.AssemblyInfoInputs.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.AssemblyInfo.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.csproj.CoreCompileInputs.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.RazorAssemblyInfo.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.RazorAssemblyInfo.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\staticwebassets\World Weather.StaticWebAssets.Manifest.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\staticwebassets\World Weather.StaticWebAssets.xml
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\scopedcss\bundle\World Weather.styles.css
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.TagHelpers.input.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.TagHelpers.output.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.RazorCoreGenerate.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.RazorTargetAssemblyInfo.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.RazorTargetAssemblyInfo.cs
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.Views.pdb
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.dll
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\ref\World Weather.dll
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.pdb
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.genruntimeconfig.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.csproj.CopyComplete
