@@ -14,6 +14,8 @@ namespace World_Weather.Controllers
 {
     public class HomeController : Controller
     {
+       
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -21,21 +23,45 @@ namespace World_Weather.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+        //Dashboard
+        public IActionResult Index()
+        {
+            // Hier können Sie den Code zum Abrufen der Temperaturen für die Städte implementieren
+            // Nehmen wir an, dass Sie eine Methode "GetTemperature" haben, die die Temperatur für eine bestimmte Stadt zurückgibt
+
+            var model = new DashboardModel
+            {
+                Wien = GetTemperature("Wien"),
+                NewYork = GetTemperature("New York"),
+                Sydney = GetTemperature("Sydney"),
+                Tokio = GetTemperature("Tokio")
+            };
+
+            return View(model);
+        }
+
+        private string GetTemperature(string city)
+        {
+            // Implementieren Sie hier den Code zum Abrufen der Temperatur für eine bestimmte Stadt
+            // Hier sollte die Logik stehen, um die Temperatur von einer Datenquelle (API, Datenbank, etc.) abzurufen
+            // Für dieses Beispiel nehmen wir an, dass die Temperatur als Zeichenfolge zurückgegeben wird
+
+            // Beispielcode, um eine zufällige Temperatur zwischen 0 und 30 Grad Celsius zu generieren
+            var random = new Random();
+            var temperature = random.Next(0, 31);
+
+            return temperature.ToString();
+        }
+
+        //User Abfrage
 
         public IActionResult GetCityData(CityModel model)
         {
