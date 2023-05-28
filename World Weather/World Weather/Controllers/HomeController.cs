@@ -3,56 +3,76 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using World_Weather.Models;
 using Microsoft.Identity.Client;
+using System.Net.Http.Headers;
+using System;
+using System.Text;
+using Newtonsoft.Json;
+using System.Linq;
+using System.IO;
 
 namespace World_Weather.Controllers
 {
     public class HomeController : Controller
     {
-        private async Task<string> GetAccessTokenAsync()
+        public IActionResult Index()
         {
-            string clientId = "cd6c8bf0-af19-471f-9c98-b175446bc7b1";
-            string clientSecret = "Q3E8Q~jEKNU~5TXs_xarer_cURdVJXlkUgyh0aUF";
-            string tenantId = "e0e93d11-b109-4808-a3ca-b013eeae1837";
-            string scope = "https://graph.microsoft.com/.default";
-            string authority = $"https://login.microsoftonline.com/{tenantId}";
+            //Dashboard
+            DashboardModel model = GetJsonFile();
 
-            var app = ConfidentialClientApplicationBuilder
-                .Create(clientId)
-                .WithClientSecret(clientSecret)
-                .WithAuthority(authority)
-                .Build();
+           
 
-            var authResult = await app.AcquireTokenForClient(new string[] { scope }).ExecuteAsync();
-            return authResult.AccessToken;
+            //Suche
+            
+
+            return View(model);
         }
 
-
-        private readonly IHttpClientFactory _httpClientFactory;
-
-        public HomeController(IHttpClientFactory httpClientFactory)
+        public DashboardModel GetJsonFile()
         {
-            _httpClientFactory = httpClientFactory;
-        }
+            try{
+                string folderpath = "C:\\Users\\Kristian\\OneDrive - FH Technikum Wien\\Systemintegration\\SYI_Project\\Dashboard_log";
+                string filepath = GetLatestJsonFile(folderpath);
+                string jsoncontent = System.IO.File.ReadAllText(filepath);
+                // JSON-Datei deserialisieren und in das DashboardModel konvertieren
+                DashboardModel dashboardModel = JsonConvert.DeserializeObject<DashboardModel>(jsoncontent);
 
-        public async Task<IActionResult> Index()
+                return dashboardModel;
+            }
+            catch
+            {
+                DashboardModel dashboardModel = new DashboardModel();
+                dashboardModel.Wien = 13;
+                dashboardModel.NewYork = 23;
+                dashboardModel.Sydney = 42;
+                dashboardModel.Tokio = 24;
+                return dashboardModel;
+            }
+
+        }
+        public string GetLatestJsonFile(string folderPath)
         {
-            var httpClient = _httpClientFactory.CreateClient();
+            // Überprüfen, ob der angegebene Ordner existiert
+            if (!Directory.Exists(folderPath))
+            {
+                throw new DirectoryNotFoundException($"Der Ordner {folderPath} existiert nicht.");
+            }
 
-            // OneDrive URL der JSON-Datei
-            string jsonFileUrl = "https://fhtw-my.sharepoint.com/:u:/g/personal/wi22m002_technikum-wien_at/Edob0oumMUxAoUHnVGqwT-MBLiBrSGd27GCeKlH47iX6pw?e=Zvv9qT";
+            // Alle JSON-Dateien im Ordner abrufen
+            string[] jsonFiles = Directory.GetFiles(folderPath, "*.json");
 
-            string accessToken = await GetAccessTokenAsync();
+            // Überprüfen, ob JSON-Dateien vorhanden sind
+            if (jsonFiles.Length == 0)
+            {
+                throw new FileNotFoundException("Keine JSON-Dateien im angegebenen Ordner gefunden.");
+            }
 
-            // Set authorization header with the access token
-            httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+            // Das aktuellste JSON-Datei basierend auf dem Dateinamen (mit Datum und Uhrzeit) ermitteln
+            string latestJsonFile = jsonFiles.OrderByDescending(f => f).First();
 
-            // Download the JSON file content
-            var jsonContent = await httpClient.GetStringAsync(jsonFileUrl);
-
-            // Deserialize the JSON into the DashboardModel
-            var dashboardModel = Newtonsoft.Json.JsonConvert.DeserializeObject<DashboardModel>(jsonContent);
-
-            return View(dashboardModel);
+            return latestJsonFile;
         }
+        //"C:\Users\Kristian\OneDrive - FH Technikum Wien\Systemintegration\SYI_Project\Dashboard_log\Dashboard_20230528_1755.json"
+
+
     }
 }
