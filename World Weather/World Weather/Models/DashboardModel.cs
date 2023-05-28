@@ -7,9 +7,9 @@ namespace World_Weather.Models
 {
     public class DashboardModel
     {
-        public string Wien { get; set; }
-        public string NewYork { get; set; }
-        public string Sydney { get; set; }
-        public string Tokio { get; set; }
+        public int Wien { get; set; }
+        public int NewYork { get; set; }
+        public int Sydney { get; set; }
+        public int Tokio { get; set; }
     }
 }
