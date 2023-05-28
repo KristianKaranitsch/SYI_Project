@@ -10,9 +10,9 @@ namespace World_Weather.Controllers
     {
         private async Task<string> GetAccessTokenAsync()
         {
-            string clientId = "YOUR_CLIENT_ID";
-            string clientSecret = "YOUR_CLIENT_SECRET";
-            string tenantId = "YOUR_TENANT_ID";
+            string clientId = "cd6c8bf0-af19-471f-9c98-b175446bc7b1";
+            string clientSecret = "Q3E8Q~jEKNU~5TXs_xarer_cURdVJXlkUgyh0aUF";
+            string tenantId = "e0e93d11-b109-4808-a3ca-b013eeae1837";
             string scope = "https://graph.microsoft.com/.default";
             string authority = $"https://login.microsoftonline.com/{tenantId}";
 
