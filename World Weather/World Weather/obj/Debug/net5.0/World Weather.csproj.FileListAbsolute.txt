@@ -332,3 +332,4 @@ C:\Users\Kristian\OneDrive - FH Technikum Wien\Dokumente\MWI\SystemIntegration\S
 C:\Users\Kristian\OneDrive - FH Technikum Wien\Dokumente\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\ref\World Weather.dll
 C:\Users\Kristian\OneDrive - FH Technikum Wien\Dokumente\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.pdb
 C:\Users\Kristian\OneDrive - FH Technikum Wien\Dokumente\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\World Weather.genruntimeconfig.cache
+C:\Users\Kristian\Documents\MWI\SystemIntegration\SYI_Project\World Weather\World Weather\obj\Debug\net5.0\Razor\Views\Home\ResponsePartial.cshtml.g.cs
