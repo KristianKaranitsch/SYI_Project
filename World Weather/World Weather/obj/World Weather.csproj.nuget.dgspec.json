@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj": {}
+    "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj": {
+    "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
+        "projectUniqueName": "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
         "projectName": "World Weather",
-        "projectPath": "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
+        "projectPath": "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
         "packagesPath": "C:\\Users\\Kristian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\obj\\",
+        "outputPath": "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.214\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -52,7 +52,7 @@ namespace World_Weather.Controllers
                     latitude = latitude
                 });
 
-                var url = "https://prod-10.northeurope.logic.azure.com/workflows/bda52adc1d9c4df5b8cc4a1bc4de1913/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=YYSjUXdYCmk0qdFazAyx2B8q5yfyPuf2Gi6ke8Wn-VI";
+                var url = "https://prod-24.northeurope.logic.azure.com:443/workflows/f0f9e1b425974994bd6629fed0392694/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1Dlbrv3yU0cal8IuHlWShgH_9EojEv-KexKCnO4i2CU";
 
                 using (var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json"))
                 {
@@ -87,7 +87,7 @@ namespace World_Weather.Controllers
 
         public List<CityModel> GetCities()
         {
-            string jsonFilePath = "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\Models\\cities.json";
+            string jsonFilePath = "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\Models\\cities.json";
             // Lesen Sie die JSON-Datei und deserialisieren Sie sie in eine Liste von CityModel-Objekten
             List<CityModel> cities = JsonConvert.DeserializeObject<List<CityModel>>(System.IO.File.ReadAllText(jsonFilePath));
 

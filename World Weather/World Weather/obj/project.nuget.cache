@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JepETQD7YDCcorM6b8Nit2UDHHZaGs5uhabvrjATrasSBnNvVDrbTyglGWy8uTzhGWEh9OPMfk3RPC5JzG0FTw==",
+  "dgSpecHash": "xFJ+b1q0KGrh14/YOvQx1BGSGjKWUZ6bkLfVcWLZpJLxCjNnqZLAf3LAr2q5KOJ/1so5HZHUPPQoZrrj6QB14w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kristian\\Documents\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
+  "projectFilePath": "C:\\Users\\Kristian\\Documents\\GitHub\\SYI_Project\\World Weather\\World Weather\\World Weather.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kristian\\.nuget\\packages\\azure.core\\1.30.0\\azure.core.1.30.0.nupkg.sha512",
     "C:\\Users\\Kristian\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
