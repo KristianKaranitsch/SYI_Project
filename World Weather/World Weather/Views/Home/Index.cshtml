@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+@model DashboardModel
+
+<h1>Dashboard</h1>
+
+<div class="Dashboard">
+    <div class="tile">
+        <h2>Wien</h2>
+        <p>Temperatur: @Model.Wien &deg;C</p>
+    </div>
+    <div class="tile">
+        <h2>New York</h2>
+        <p>Temperatur: @Model.NewYork &deg;C</p>
+    </div>
+    <div class="tile">
+        <h2>Sydney</h2>
+        <p>Temperatur: @Model.Sydney &deg;C</p>
+    </div>
+    <div class="tile">
+        <h2>Tokio</h2>
+        <p>Temperatur: @Model.Tokio &deg;C</p>
+    </div>
+</div>
+
+<form asp-controller="Home" asp-action="GetCityCoordinates" method="get">
+    <!-- Dropdown-Element -->
+    <div class="form-group">
+        <label for="SelectedCapital">Hauptstadt:</label>
+        @Html.DropDownListFor(model => model.SelectedCapital, new SelectList(Model.CityPickOptions), new { @class = "form-control", id = "SelectedCapital", name = "city" })
+    </div>
+
+    <!-- Suchbutton -->
+    <button type="submit" id="searchButton" class="btn btn-primary">Suchen</button>
+</form>
+
+<!-- Platzhalter für die Anzeige der Daten -->
+<div id="temperature"></div>
+
+@section scripts {
+    <script>
+        // GET-Request manuell abfangen und behandeln
+        document.getElementById("searchButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Verhindern des Standardverhaltens des Submit-Buttons
+
+            var selectedCapital = document.getElementById("SelectedCapital").value;
+
+            // GET-Request senden
+            fetch("/Home/GetCityCoordinates?city=" + encodeURIComponent(selectedCapital))
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Fehler beim Senden des GET-Requests: " + response.status);
+                    }
+                })
+                .then(function (data) {
+                    // Überprüfen der erhaltenen Daten auf Fehler
+                    if (data.Error) {
+                        // ...
+                    } else {
+                        // Verarbeiten der erfolgreichen Daten
+                        var temperatureElement = document.getElementById("temperature");
+                        temperatureElement.textContent = "Temperatur: " + data.capitalTemperature + "°C"; // Beachte die Änderung hier
+                    }
+                })
+                .catch(function (error) {
+                    // Behandeln von Fehlern
+                    console.error(error);
+                });
+        });
+    </script>
+}
