@@ -8,11 +8,11 @@ namespace World_Weather.Models
 {
     public class CityModel
     {
-        [Required(ErrorMessage = "Bitte wählen Sie eine Stadt aus.")]
-        public string SelectedCity { get; set; }
 
-        public string Longitude { get; set; }
+        public string CapitalName { get; set; }
 
-        public string Latitude { get; set; }
+        public string CapitalLongitude { get; set; }
+
+        public string CapitalLatitude { get; set; }
     }
 }

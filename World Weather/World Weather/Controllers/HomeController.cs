@@ -9,6 +9,7 @@ using System.Text;
 using Newtonsoft.Json;
 using System.Linq;
 using System.IO;
+using System.Collections.Generic;
 
 namespace World_Weather.Controllers
 {
@@ -16,15 +17,61 @@ namespace World_Weather.Controllers
     {
         public IActionResult Index()
         {
+            //Befüllen CityModel
+            List<CityModel> cities = getCities();
+
             //Dashboard
             DashboardModel model = GetJsonFile();
 
-           
-
             //Suche
-            
+            DropdownGenerator(model,cities);
 
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult GetCityCoordinates(string city)
+        {
+            List<CityModel> cities = getCities();
+            // Suchen Sie die Stadt in der Liste cities und geben Sie die entsprechenden Längen- und Breitengrade zurück
+            var cityData = cities.FirstOrDefault(c => c.CapitalName == city);
+
+            if (cityData != null)
+            {
+                var coordinates = new CityModel
+                {
+                    CapitalLongitude = cityData.CapitalLongitude,
+                    CapitalLatitude = cityData.CapitalLatitude
+                };
+
+                return Json(coordinates);
+            }
+
+            return NotFound();
+        }
+
+        private List<CityModel> getCities()
+        {
+            string jsonFilePath = "\\Users\\Kristian\\OneDrive - FH Technikum Wien\\Dokumente\\MWI\\SystemIntegration\\SYI_Project\\World Weather\\World Weather\\Models\\cities.json";
+            // Lesen Sie die JSON-Datei und deserialisieren Sie sie in eine Liste von CityModel-Objekten
+            List<CityModel> cities = JsonConvert.DeserializeObject<List<CityModel>>(System.IO.File.ReadAllText(jsonFilePath));
+
+            return cities;
+        }
+
+        public void DropdownGenerator(DashboardModel model, List<CityModel>cities)
+        {
+            // Extrahieren Sie die Hauptstädte aus der Liste
+            List<string> capitalNames = cities.Select(c => c.CapitalName).ToList();
+
+            // Erstellen Sie eine Instanz von CityDropdownModel und setzen Sie die Hauptstädte als Optionen
+            var dropdownOptions = new CityDropdownModel
+            {
+                CityPickOptions = capitalNames
+            };
+
+            // Setzen Sie die Hauptstädte als Optionen für das Dropdown-Feld in Ihrem Model
+            model.CityPickOptions = capitalNames;
         }
 
         public DashboardModel GetJsonFile()

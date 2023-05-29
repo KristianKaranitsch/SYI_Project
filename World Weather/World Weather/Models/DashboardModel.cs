@@ -12,5 +12,6 @@ namespace World_Weather.Models
         public int NewYork { get; set; }
         public int Sydney { get; set; }
         public int Tokio { get; set; }
+        public List<string> CityPickOptions { get; set; }
     }
 }
