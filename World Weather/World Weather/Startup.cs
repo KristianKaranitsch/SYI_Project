@@ -55,12 +55,6 @@ namespace World_Weather
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                 );
-
-                endpoints.MapControllerRoute(
-                    name: "getCityCoordinates",
-                    pattern: "Home/GetCityCoordinates",
-                    defaults: new { controller = "Home", action = "GetCityCoordinates" }
-                );
             });
 
         }

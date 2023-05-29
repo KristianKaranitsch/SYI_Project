@@ -4,8 +4,6 @@
 }
 @model DashboardModel
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 <h1>Dashboard</h1>
 
 <div class="Dashboard">
@@ -27,37 +25,13 @@
     </div>
 </div>
 
+<form asp-controller="Home" asp-action="GetCityCoordinates" method="post">
     <!-- Dropdown-Element -->
     <div class="form-group">
         <label for="capitalSelect">Hauptstadt:</label>
-        @Html.DropDownList("CapitalName", new SelectList(Model.CityPickOptions), new { @class = "form-control", @id = "capitalSelect" })
+        @Html.DropDownList("CapitalName", new SelectList(Model.CityPickOptions), new { @class = "form-control"})
     </div>
 
     <!-- Suchbutton -->
-    <button type="button" id="searchButton" class="btn btn-primary">Suchen</button>
-
-<!-- Skript für den Button-Klick -->
-    <script>
-
-    document.getElementById("searchButton").addEventListener("click", function () {
-        var selectedCity = document.getElementById("capitalSelect").value;
-
-        // Konvertiere das ausgewählte Stadtobjekt in JSON
-        var cityJson = JSON.stringify({ city: selectedCity });
-
-        // Führe die AJAX-Anforderung aus, um die Koordinaten abzurufen
-        $.ajax({
-            url: '@Url.Action("GetCityCoordinates", "Home")' + '?city=' + cityJson,
-            type: 'GET',
-            data: { city: cityJson },
-            success: function (data) {
-                // Erfolgreiche Antwort vom Server
-                console.log(data);
-            },
-            error: function (xhr, status, error) {
-                // Fehler beim Serveraufruf
-                console.error(error);
-            }
-        });
-    });
-    </script>
+    <button type="submit" id="searchButton" class="btn btn-primary">Suchen</button>
+</form>
