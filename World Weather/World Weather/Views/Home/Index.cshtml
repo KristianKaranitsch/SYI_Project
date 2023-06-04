@@ -2,74 +2,226 @@
     ViewData["Title"] = "Home Page";
     Layout = "_Layout";
 }
-@model DashboardModel
+<html>
+<head>
 
-<h1>Dashboard</h1>
+</head>
+<body>
 
-<div class="Dashboard">
-    <div class="tile">
-        <h2>Wien</h2>
-        <p>Temperatur: @Model.Wien &deg;C</p>
+    @model DashboardModel
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <h1>Get your Weather</h1>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Wien</h2>
+                        <p>Temperatur: @Model.Wien &deg;C </p>
+                        @if (Model.Wien > 30)
+                        {
+                            <img src="~/images/very_hot.jpg" alt="Very Hot" class="img-fluid">
+                        }
+                        else if (Model.Wien >= 25 && Model.Wien <= 30)
+                        {
+                            <img src="~/images/hot.jpg" alt="Hot" class="img-fluid">
+                        }
+                        else if (Model.Wien >= 17 && Model.Wien < 25)
+                        {
+                            <img src="~/images/warm.jpg" alt="Warm" class="img-fluid">
+                        }
+                        else if (Model.Wien >= 10 && Model.Wien < 17)
+                        {
+                            <img src="~/images/mild.jpg" alt="Mild" class="img-fluid">
+                        }
+                        else if (Model.Wien >= 0 && Model.Wien < 10)
+                        {
+                            <img src="~/images/cool.jpg" alt="Cool" class="img-fluid">
+                        }
+                        else if (Model.Wien >= -30 && Model.Wien < 0)
+                        {
+                            <img src="~/images/cold.jpg" alt="Cold" class="img-fluid">
+                        }
+                        else
+                        {
+                            <img src="~/images/extremely_cold.jpg" alt="Extremely Cold" class="img-fluid">
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>New York</h2>
+                        <p>Temperatur: @Model.NewYork &deg;C</p>
+                        @if (Model.NewYork > 30)
+                        {
+                            <img src="~/images/very_hot.jpg" alt="Very Hot" class="img-fluid">
+                        }
+                        else if (Model.NewYork >= 25 && Model.NewYork <= 30)
+                        {
+                            <img src="~/images/hot.jpg" alt="Hot " class="img-fluid">
+                        }
+                        else if (Model.NewYork >= 17 && Model.NewYork < 25)
+                        {
+                            <img src="~/images/warm.jpg" alt="Warm" class="img-fluid">
+                        }
+                        else if (Model.NewYork >= 10 && Model.NewYork < 17)
+                        {
+                            <img src="~/images/mild.jpg" alt="Mild" class="img-fluid">
+                        }
+                        else if (Model.NewYork >= 0 && Model.NewYork < 10)
+                        {
+                            <img src="~/images/cool.jpg" alt="Cool" class="img-fluid">
+                        }
+                        else if (Model.NewYork >= -30 && Model.NewYork < 0)
+                        {
+                            <img src="~/images/cold.jpg" alt="Cold" class="img-fluid">
+                        }
+                        else
+                        {
+                            <img src="~/images/extremely_cold.jpg" alt="Extremely Cold" class="img-fluid">
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Sydney</h2>
+                        <p>Temperatur: @Model.Sydney &deg;C</p>
+                        @if (Model.Sydney > 30)
+                        {
+                            <img src="~/images/very_hot.jpg" alt="Very Hot" class="img-fluid">
+                        }
+                        else if (Model.Sydney >= 25 && Model.Sydney <= 30)
+                        {
+                            <img src="~/images/hot.jpg" alt="Hot" class="img-fluid">
+                        }
+                        else if (Model.Sydney >= 17 && Model.Sydney < 25)
+                        {
+                            <img src="~/images/warm.jpg" alt="Warm" class="img-fluid">
+                        }
+                        else if (Model.Sydney >= 10 && Model.Sydney < 17)
+                        {
+                            <img src="~/images/mild.jpg" alt="Mild" class="img-fluid">
+                        }
+                        else if (Model.Sydney >= 0 && Model.Sydney < 10)
+                        {
+                            <img src="~/images/cool.jpg" alt="Cool" class="img-fluid">
+                        }
+                        else if (Model.Sydney >= -30 && Model.Sydney < 0)
+                        {
+                            <img src="~/images/cold.jpg" alt="Cold" class="img-fluid">
+                        }
+                        else
+                        {
+                            <img src="~/images/extremely_cold.jpg" alt="Extremely Cold" class="img-fluid">
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Tokio</h2>
+                        <p>Temperatur: @Model.Tokio &deg;C</p>
+                        @if (Model.Tokio > 30)
+                        {
+                            <img src="~/images/very_hot.jpg" alt="Very Hot" class="img-fluid">
+                        }
+                        else if (Model.Tokio >= 25 && Model.Tokio <= 30)
+                        {
+                            <img src="~/images/hot.jpg" alt="Hot" class="img-fluid">
+                        }
+                        else if (Model.Tokio >= 17 && Model.Tokio < 25)
+                        {
+                            <img src="~/images/warm.jpg" alt="Warm" class="img-fluid">
+                        }
+                        else if (Model.Tokio >= 10 && Model.Tokio < 17)
+                        {
+                            <img src="~/images/mild.jpg" alt="Mild" class="img-fluid">
+                        }
+                        else if (Model.Tokio >= 0 && Model.Tokio < 10)
+                        {
+                            <img src="~/images/cool.jpg" alt="Cool" class="img-fluid">
+                        }
+                        else if (Model.Tokio >= -30 && Model.Tokio < 0)
+                        {
+                            <img src="~/images/cold.jpg" alt="Cold" class="img-fluid">
+                        }
+                        else
+                        {
+                            <img src="~/images/extremely_cold.jpg" alt="Extremely Cold" class="img-fluid">
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <form asp-controller="Home" asp-action="GetCityCoordinates" method="get">
+            <!-- Dropdown-Element -->
+            <div class="form-group">
+                <label for="SelectedCapital">Hauptstadt:</label>
+                @Html.DropDownListFor(model => model.SelectedCapital, new SelectList(Model.CityPickOptions), new { @class = "form-control", id = "SelectedCapital", name = "city" })
+            </div>
+
+            <!-- Suchbutton -->
+            <button type="submit" id="searchButton" class="btn btn-primary">Suchen</button>
+        </form>
+        <p></p>
+
+        <!-- Platzhalter für die Anzeige der Daten -->
+        <div id="temperature" class="temperature-container"></div>
     </div>
-    <div class="tile">
-        <h2>New York</h2>
-        <p>Temperatur: @Model.NewYork &deg;C</p>
-    </div>
-    <div class="tile">
-        <h2>Sydney</h2>
-        <p>Temperatur: @Model.Sydney &deg;C</p>
-    </div>
-    <div class="tile">
-        <h2>Tokio</h2>
-        <p>Temperatur: @Model.Tokio &deg;C</p>
-    </div>
-</div>
 
-<form asp-controller="Home" asp-action="GetCityCoordinates" method="get">
-    <!-- Dropdown-Element -->
-    <div class="form-group">
-        <label for="SelectedCapital">Hauptstadt:</label>
-        @Html.DropDownListFor(model => model.SelectedCapital, new SelectList(Model.CityPickOptions), new { @class = "form-control", id = "SelectedCapital", name = "city" })
-    </div>
+    @section scripts {
+        <script>
+            // GET-Request manuell abfangen und behandeln
+            document.getElementById("searchButton").addEventListener("click", function (event) {
+                event.preventDefault(); // Verhindern des Standardverhaltens des Submit-Buttons
 
-    <!-- Suchbutton -->
-    <button type="submit" id="searchButton" class="btn btn-primary">Suchen</button>
-</form>
+                var selectedCapital = document.getElementById("SelectedCapital").value;
 
-<!-- Platzhalter für die Anzeige der Daten -->
-<div id="temperature"></div>
+                // GET-Request senden
+                fetch("/Home/GetCityCoordinates?city=" + encodeURIComponent(selectedCapital))
+                    .then(function (response) {
+                        if (response.ok) {
+                            return response.json();
+                        } else {
+                            throw new Error("Fehler beim Senden des GET-Requests: " + response.status);
+                        }
+                    })
+                    .then(function (data) {
+                        // Überprüfen der erhaltenen Daten auf Fehler
+                        if (data.Error) {
+                            // ...
+                        } else {
+                            // Verarbeiten der erfolgreichen Daten
+                            var temperatureElement = document.getElementById("temperature");
+                            temperatureElement.innerHTML = "<div class='temperature alert alert-primary'>" + data.capitalTemperature + "°C</div>"; // Beachte die Änderung hier
+                        }
+                    })
+                    .catch(function (error) {
+                        // Behandeln von Fehlern
+                        console.error(error);
+                    });
+            });
+        </script>
 
-@section scripts {
-    <script>
-        // GET-Request manuell abfangen und behandeln
-        document.getElementById("searchButton").addEventListener("click", function (event) {
-            event.preventDefault(); // Verhindern des Standardverhaltens des Submit-Buttons
 
-            var selectedCapital = document.getElementById("SelectedCapital").value;
 
-            // GET-Request senden
-            fetch("/Home/GetCityCoordinates?city=" + encodeURIComponent(selectedCapital))
-                .then(function (response) {
-                    if (response.ok) {
-                        return response.json();
-                    } else {
-                        throw new Error("Fehler beim Senden des GET-Requests: " + response.status);
-                    }
-                })
-                .then(function (data) {
-                    // Überprüfen der erhaltenen Daten auf Fehler
-                    if (data.Error) {
-                        // ...
-                    } else {
-                        // Verarbeiten der erfolgreichen Daten
-                        var temperatureElement = document.getElementById("temperature");
-                        temperatureElement.textContent = "Temperatur: " + data.capitalTemperature + "°C"; // Beachte die Änderung hier
-                    }
-                })
-                .catch(function (error) {
-                    // Behandeln von Fehlern
-                    console.error(error);
-                });
-        });
-    </script>
-}
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    }
+
+</body>
+
+</html>

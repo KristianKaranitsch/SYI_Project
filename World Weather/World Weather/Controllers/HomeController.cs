@@ -51,7 +51,7 @@ namespace World_Weather.Controllers
                     longitude = longitude,
                     latitude = latitude
                 });
-                //Logic App URL
+//Logic App Suche
                 var url = "https://prod-24.northeurope.logic.azure.com:443/workflows/f0f9e1b425974994bd6629fed0392694/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=1Dlbrv3yU0cal8IuHlWShgH_9EojEv-KexKCnO4i2CU";
 
                 using (var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json"))
@@ -116,6 +116,7 @@ namespace World_Weather.Controllers
 
         public DashboardModel GetJsonFile()
         {
+//Dashboard Daten aus OneDrive
             try
             {
                 string folderpath = "C:\\Users\\Kristian\\OneDrive - FH Technikum Wien\\Systemintegration\\SYI_Project\\Dashboard_log";
